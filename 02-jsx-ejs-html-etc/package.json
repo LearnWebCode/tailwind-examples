@@ -1,0 +1,38 @@
+{
+  "name": "tailwindsetup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "src-react/index.js",
+      "public/*"
+    ]
+  },
+  "scripts": {
+    "start": "run-p ourserver ourwebpack tailwind",
+    "tailwind": "tailwindcss -i ./css/input.css -o ./public/output.css --watch --minify",
+    "ourwebpack": "webpack --watch",
+    "ourserver": "nodemon server-compiled",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@tailwindcss/typography": "^0.5.2",
+    "babel-loader": "^8.2.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "npm-run-all": "^4.1.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "tailwindcss": "^3.0.24",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
